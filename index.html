@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Invoice Calculator</title>
+	
+	<style>
+	    thead{
+	        font-weight:bold;
+	    }
+	    
+	    td{
+	        padding-left:5px;
+	        padding-right:5px;	        
+	    }
+	    
+	    td.sub-total{
+	        text-align:right;	        
+	    }
+	</style>
+</head>
+<body>
+	<h1>MDIA 2294: ACME Corp Invoice</h1>
+	
+	<table>
+	    <thead>
+	        <tr>
+	            <td>ITEM</td>
+	            <td>DESCRIPTION</td>
+	            <td>QTY</td>
+	            <td>PRICE</td>
+	            <td>LINE TOTAL</td>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr>
+	            <td>1</td>
+	            <td><input id="line-1-description" type="text" size="40" value="Anvil" /></td>
+	            <td><input id="line-1-quantity" type="text" size="3" value="5" /></td>
+	            <td><input id="line-1-price" type="text" size="6" value="35.00" /></td>
+	            <td class="sub-total"><span id="line-1"></span></td>
+	        </tr>
+	        <tr>
+	            <td>2</td>
+	            <td><input id="line-2-description" type="text" size="40" value="Rocket Skates (each)" /></td>
+	            <td><input id="line-2-quantity" type="text" size="3" value="2" /></td>
+	            <td><input id="line-2-price" type="text" size="6" value="24.99" /></td>
+	            <td class="sub-total"><span id="line-2"></span></td>
+	        </tr>
+	        <tr>
+	            <td>3</td>
+	            <td><input id="line-3-description" type="text" size="40" value="Giant Magnet" /></td>
+	            <td><input id="line-3-quantity" type="text" size="3" value="1" /></td>
+	            <td><input id="line-3-price" type="text" size="6" value="125.50" /></td>
+	            <td class="sub-total"><span id="line-3"></span></td>
+	        </tr>
+	        <tr>
+	            <td>4</td>
+	            <td><input id="line-4-description" type="text" size="40" value="Ball bearings" /></td>
+	            <td><input id="line-4-quantity" type="text" size="3" value="500" /></td>
+	            <td><input id="line-4-price" type="text" size="6" value="0.25" /></td>
+	            <td class="sub-total"><span id="line-4"></span></td>
+	        </tr>
+	        <tr>
+	            <td>5</td>
+	            <td><input id="line-5-description" type="text" size="40" value="Portable holes" /></td>
+	            <td><input id="line-5-quantity" type="text" size="3" value="12" /></td>
+	            <td><input id="line-5-price" type="text" size="6" value="15.25" /></td>
+	            <td class="sub-total"><span id="line-5"></span></td>
+	        </tr>
+	    </tbody>
+	    <tfoot>
+	        <tr>
+	            <td colspan="4" style="text-align:right;">SUB TOTAL</td>  
+	            <td class="sub-total"><span id="sub-total"></span></td>	        
+	        </tr>
+	        <tr>
+	            <td colspan="4" style="text-align:right;">DISCOUNT</td>  
+	            <td class="sub-total"><span id="discount"></span></td>	        
+	        </tr>
+	        <tr>
+	            <td colspan="4" style="text-align:right;">TAX</td>  
+	            <td class="sub-total"><span id="tax"></span></td>	        
+	        </tr>
+	        <tr>
+	            <td colspan="4" style="text-align:right;">TOTAL</td>  
+	            <td class="sub-total" style="border-top:solid black 1px"><span id="Total"></span></td>	        
+	        </tr>
+	    </tfoot>	    
+	</table>
+	
+	<div><button id="calculate">Calculate</button></div>
+	<div>NOTE: discounts of 10% are given to orders over $250</div>
+
+	<script>
+		
+		//chiaoli_A01078940_Assignment1
+
+		// Store the button in a variable for later use in an event listener.A button with the id "calculate_btn"
+		const calculate_btn = document.querySelector('#calculate');
+        
+		// Create a new function which called calculate
+		function calculate() {
+
+			// First item list
+			// Select the element with the id "line-1-quantity" and retrieves its current value (which is initially set to "5" in input and assigns it to the variable "qty1"). Then the variable can be used to show the caculations. The "document.querySelector" is used to locate the HTML element by specifying the style or ID. "value" is used to set its current value. Use const for the 
+			const qty1 = document.querySelector("#line-1-quantity").value;
+
+			// Select the element with the id "line-1-price" and retrieves its current value
+			const price1 = document.querySelector("#line-1-price").value;
+
+			// Result of line-1 total is equal to quantity mutiple price. "qty1" stores the amount of the first item. It gets amount by the value from the input value element with ID "line-1-quantity". "price1" stores the amount of the first item. It gets amount by the value from the imput value elemenet with ID "line-1-price". "total" represents the total cost for the first item based on its quantity and its cost for each individual unit. 
+			const total1= qty1 * price1;
+
+			// Display the caculated the first row total with the price tag. "document.querySelector("#line-1")" finds HTML element with ID "line-1". ".innerHTML" is used to access the HTML content inside an element. "$" + total, adds the price tag($) as known as concatenate in front of the calculated total cost for the first item("total1").
+			document.querySelector("#line-1").innerHTML = "$" + total1;
+
+			// second item list
+			//Select the element with the id "line-2-quantity" and retrieves its current value (which is initially set to "2" in input and assigns it to the variable "qty2").
+			const qty2 = document.querySelector("#line-2-quantity").value;
+
+			// Select the element with the id "line-2-price" and retrieves its current value
+			const price2 = document.querySelector("#line-2-price").value;
+
+			// Result of line-2 total is equal to quantity mutiple price.
+			const total2= qty2 * price2
+
+			// Display the caculated the first row total with the price tag.
+			document.querySelector("#line-2").innerHTML = "$" + total2;
+	
+
+			// third item list
+			//Select the element with the id "line-3-quantity" and retrieves its current value (which is initially set to "1" in input and assigns it to the variable "qty3").
+			const qty3 = document.querySelector("#line-3-quantity").value;
+
+			// Select the element with the id "line-3-price" and retrieves its current value
+			const price3 = document.querySelector("#line-3-price").value;
+
+			// Result of line-3 total is equal to quantity mutiple price.
+			const total3= qty3 * price3;
+
+			// Display the caculated the first row total with the price tag.
+			document.querySelector("#line-3").innerHTML = "$" + total3;
+
+			// fourth item list
+			//Select the element with the id "line-4-quantity" and retrieves its current value (which is initially set to "500" in input and assigns it to the variable "qty4").
+			const qty4 = document.querySelector("#line-4-quantity").value;
+
+			// Select the element with the id "line-4-price" and retrieves its current value
+			const price4 = document.querySelector("#line-4-price").value;
+
+			// Result of line-4 total is equal to quantity mutiple price.
+			const total4= qty4 * price4;
+
+			// Display the caculated the first row total with the price tag.
+			document.querySelector("#line-4").innerHTML = "$" + total4;
+
+			// fifth item list
+			//Select the element with the id "line-5-quantity" and retrieves its current value (which is initially set to "12" in input and assigns it to the variable "qty5").
+			const qty5 = document.querySelector("#line-5-quantity").value;
+			
+			// Select the element with the id "line-5-price" and retrieves its current value
+			const price5 = document.querySelector("#line-5-price").value;
+
+			// Result of line-5 total is equal to quantity mutiple price.
+			const total5= qty5 * price5;
+
+			// Display the caculated the first row total with the price tag.
+			document.querySelector("#line-5").innerHTML = "$" + total5
+			
+			// Subtotal 
+			// Result of subtotal is equal to total1, total2, total3 and total4
+			const subtotal = total1 + total2 + total3 + total4 + total5;
+			document.querySelector("#sub-total").innerHTML = subtotal;
+
+			// Discount
+			// Calculate discount using ternary statement: if the subtotal is equal to or greater than 250, the discounts will be calculated as 10%. If not the discounts will set to 0.
+			const discounts = (subtotal >= 250) ? subtotal * .1 : 0;
+
+			// Display discounts formatted with two decimal places and the price tag($)
+			document.querySelector("#discount").innerHTML = "$" + discounts.toFixed(2);
+
+			// Tax
+			// Result of taxtotal is subtotal-discounts and apply a tax rate of 12% to that value
+			const taxtotal = (subtotal - discounts) * .12
+
+			// Display taxtotal formatted with two decimal places and the price tag($)
+			document.querySelector("#tax").innerHTML = "$" + taxtotal.toFixed(2);
+			
+			//total
+			// Result of alltotal is equal to subtotal, discounts and taxtotal
+			const alltotal = subtotal + discounts + taxtotal;
+
+			// Display alltotal formatted with two decimal places and the price tag($)
+			document.querySelector("#Total").innerHTML = "$" + alltotal.toFixed(2);
+		}
+
+	//Adding an event listener to the button to call the calculate function on click 
+	calculate_btn.addEventListener("click", calculate);
+
+    </script>
+</body>
+</html>
