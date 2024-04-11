@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Clu Interior Design Studio - Services</title>
+<link href="css/style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="path/to/lightbox.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<link href="css/popup-lightbox.css" rel="stylesheet" /> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    
+<div class="topnav" id="myTopnav">
+    <a href="index.html">Home</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="contact.html" >Contact</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+
+<header>
+    <h1 id="page-title" class="web-title">Design Services</h1>
+    <p class="header-description"><u>We offer a number of design services. A consultation will help determine which services are right for your project's unique needs.</u></p>
+</header>
+
+<div class="container">
+    <div class="banner-2"></div>
+
+    <section class="service">
+        <div class="service-text">
+            <h1>01- Furniture Layout and Space planning</h1>
+            <p>Furniture layout and space planning for each project is fundamental in creating efficient, functional, and visually appealing interiors that meet the needs of the occupants while maximizing the use of available space.</p>
+        </div>
+    </section>
+
+    <section class="service">
+        <div class="service-text">        
+            <h1>02- Furniture, Fabric and Accessories Specifications</h1>
+            <p>Furniture, fabric, and accessories specifications for the building are designed to create a cohesive and visually appealing interior environment that complements the overall design concept and meets the functional and aesthetic requirements of the space.</p>
+        </div>
+    </section>
+
+    <section class="service">
+        <div class="service-text">        
+            <h1>03- Rendering and 3D Modeling</h1>
+            <p>Renderings help designers and clients visualize the layout, proportions, and aesthetics of a space. These digital visualizations help communicate design concepts, make informed decisions, and bring ideas to life, enhancing the overall design process and facilitating effective communication between designers, clients, and stakeholders.</p>
+        </div>
+    </section>
+
+    <section class="service">
+        <div class="service-text">        
+            <h1>04- Hardware, Plumbing and Appliance Specification</h1>
+            <p>Hardware, plumbing, and appliance specifications for the building are designed to provide functional and visually appealing solutions that meet the specific needs and requirements of the space.</p>
+        </div>
+    </section>
+
+    <section class="section-title">
+        <div class="section-text">        
+            <a class="image-link" href="image/jean-philippe-delberghe-90eBoEp2tS0-unsplash.jpg"><img src="image/jean-philippe-delberghe-90eBoEp2tS0-unsplash.jpg" alt="photo of materials"></a>
+            <h2>Efficiently Beautiful</h2>
+            <p>To us, beauty carries many meanings: in addition to pure aesthetics, there is beauty in how spaces make us feel and how they relate to use. Our design intent is to create environments that both captivate with their aesthetic appeal and inspire. By integrating smart design principles, making appropriate material selection, optimizing space utilization, and employing innovative solutions, these spaces achieve both beauty and functionality.</p>
+        </div>
+    </section>
+
+    <section class="section cta">
+        <h2 class="section-title">Feature Projects</h2>
+        <div class="main-carousel" id="feature-carousel">
+            <div class="carousel-cell"><a class="image-link" href="image/lobby.jpg"><img src="image/lobby.jpg" alt="Lobby Design"></a></div>
+            <div class="carousel-cell"><a class="image-link" href="image/office.jpg"><img src="image/office.jpg" alt="Office Design"></a></div>
+            <div class="carousel-cell"><a class="image-link" href="image/01.-Tiny-Apartments-corridor-uai-1032x1290.jpg"><img src="image/01.-Tiny-Apartments-corridor-uai-1032x1290.jpg" alt="Apartment Design"></a></div>
+        </div>
+    </section>
+    <p class="text-center"><u>See all projects</u></p>
+</div>
+
+<footer>
+    <p>1-604-800-9887</p>
+    <p>@vcmanagement.ca</p>
+    <p>Hastings Street, Burnaby, BC, V5B 1R3</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var flkty = new Flickity('#feature-carousel', {
+            cellAlign: 'left',
+            contain: true,
+            wrapAround: true,
+            autoPlay: 5000 
+        });
+
+        $('.image-link').magnificPopup({
+            type: 'image'
+        });
+    });
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>

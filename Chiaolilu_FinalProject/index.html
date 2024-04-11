@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clu Interior Design Studio</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="path/to/lightbox.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link href="css/popup-lightbox.css" rel="stylesheet" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div class="container">
+
+        <div class="banner"></div>
+    
+        <header>
+            <h1 id="page-title" class="web-title">We Design Beautifully & Functional Spaces</h1>
+        </header>
+        
+        <section class="section mission-section">
+            <div class="mission-content">
+                <a class="image-link" href="image/IMG_4932.jpg"><img src="image/IMG_4932.jpg" alt="photo of materials"></a>
+                <div>
+                    <h2 class="section-title">Our Mission</h2>
+                    <p>We create beautiful and functional spaces that reflect the unique needs and personalities of our clients. We believe that great design can enhance the quality of life, and we are committed to delivering exceptional service and innovative solutions to exceed our clients' expectations. With a focus on creativity, sustainability, and attention to detail, we aim to transform spaces into inspiring, comfortable, and livable environments that bring joy to our clients every day.</p>
+                </div>
+            </div>
+        </section>
+    
+        <section class="section core-value-section">
+            <div class="core-value-content">
+                <div>
+                    <h2 class="section-title">Our Core Value</h2>
+                    <p>Our approach to project execution reflects our core values: Creativity, Collaboration, Quality, Client Satisfaction, and the pride we take in seeing our vision come to life. Our principles enable us to foster long-lasting relationships with all stakeholders while creating inspired, approachable spaces for each client's unique needs.</p>
+                </div>
+                <a class="image-link" href="image/daniel-chen-SoNaNOFT974-unsplash.jpg"><img src="image/daniel-chen-SoNaNOFT974-unsplash.jpg" alt="photo of materials"></a>
+            </div>
+        </section>
+        
+        <section class="section cta">
+            <h2 class="section-title">Feature Projects</h2>
+            <div class="main-carousel" id="feature-carousel">
+                <div class="carousel-cell"><a class="image-link" href="image/lobby.jpg"><img src="image/lobby.jpg" alt="Lobby Design"></a></div>
+                <div class="carousel-cell"><a class="image-link" href="image/office.jpg"><img src="image/office.jpg" alt="Office Design"></a></div>
+                <div class="carousel-cell"><a class="image-link" href="image/01.-Tiny-Apartments-corridor-uai-1032x1290.jpg"><img src="image/01.-Tiny-Apartments-corridor-uai-1032x1290.jpg" alt="Apartment Design"></a></div>
+            </div>
+        </section>
+        <p class="text-center"><u>See all projects</u></p>
+    </div>
+
+    <footer>
+        <p>1-604-800-9887</p>
+        <p>@vcmanagement.ca</p>
+        <p>Hastings Street, Burnaby, BC, V5B 1R3</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var flkty = new Flickity('#feature-carousel', {
+            cellAlign: 'left',
+            contain: true,
+            wrapAround: true,
+            autoPlay: 5000 
+        });
+
+        $('.image-link').magnificPopup({
+            type: 'image'
+        });
+    });
+</script>
+<script src="js/script.js"></script>
+</body>
+</html>
